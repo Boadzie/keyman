@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.5.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <title>FastAPI & HTMX Mastery</title>
+</head>
+
+<body>
+    <section class="container mx-auto px-14 mb-24">
+        <h1 class="text-4xl my-2 ">FastAPI & HTMX Mastery</h1>
+
+
+        <form method="POST" class="mt-5 flex flex-col gap-3">
+            <textarea
+                class="min-h-44 ring-1 textarea textarea-bordered textarea-lg w-full rounded-md focus:outline-none"
+                type="text" name="text" placeholder="Type your text...."></textarea>
+            <button class="btn btn-outline w-24" hx-post="/extract_key" hx-target="#key" type="submit">Submit</button>
+        </form>
+        <div id="key"></div>
+        </div>
+    </section>
+</body>
+
+</html>
